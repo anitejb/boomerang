@@ -9,6 +9,7 @@
     - [Editing Short Links](#editing-short-links)
     - [Removing Short Links](#removing-short-links)
 - [Helpful Tips](#helpful-tips)
+- [Is Boomerang right for you?](#is-boomerang-right-for-you?)
 - [License](#license)
 - [Disclaimer](#disclaimer)
 
@@ -85,6 +86,33 @@ Github Pages is finnicky. There will be times when builds fail, or a short link 
 Keep in mind that browsers cache URLs, so the latest version might not be what your browser is currently displaying.
 
 Found something else? [Let me know!](https://github.com/anitejb/boomerang/issues)
+
+## Is Boomerang right for you?
+
+Why I think Boomerang is cool:
+- No JavaScript, no servers, no database management.
+    - Users have it super simple, and don't need to worry about compatibility across browsers or additional maintenance. Boomerang uses pure HTML and [meta refresh](https://en.wikipedia.org/wiki/Meta_refresh) to perform instant client-side redirects. Everything on the backend is handled through Github, and there are zero requirements.
+- Continuously customizable.
+    - Want to take down a link you made yesterday, or change a link (short path or destination)? No problem! Changes are quick and easy, with nothing requiring more than 3 clicks. Although deleted links will remain in your commit history, they won't clog up the front page of your repository.
+- No formatting.
+    - Just the short link, and the destination URL. One file per link, super clean and easy to find. Sure, having users create a YAML config file with all of the links could be cleaner, and probably programmatically easier. But is it easier for the user? Not really, in my opinion.
+- No Github Issues.
+    - Advantage #1: I can actually use Issues to track stuff that needs to be fixed.
+    - Advantage #2: Less spam. Issue numbers automatically increment on each new issue, which can quickly lead to repositories accumulating an insane number of issues. I guess it depends on how it's handled, but using Issues is not the right solution for me.
+
+Where other services might be better:
+- You need short links fast (like instantaneous fast, and you can't afford to wait up to a few minutes while Github Pages runs a build)
+- You don't care what the short links are (or you would prefer them to be auto-generated)
+- You need to make short links in bulk
+- You don't need to worry about changing links later (you don't care if they are permanent)
+
+Personally, I find Boomerang to be most useful for creating **readable links** that I will use for a **long time**, and can easily **modify** if I ever need to in the future. I use Boomerang on a personal subdomain at `go.anitejb.dev`, and a perfect example is https://go.anitejb.dev/spotify, which takes people straight to my Spotify profile, rather than having to type out https://open.spotify.com/user/beyak4oanpa6cl0x0ic4q1qze. Pretty neat!
+
+### Shoutouts
+
+If you feel like Boomerang isn't for you, check out these similar projects. They're super cool!
+- https://github.com/nelsontky/gh-pages-url-shortener
+- https://github.com/wesleytodd/short
 
 ## License
 Copyright (c) 2020 Anitej Biradar. Released under the MIT License. See
